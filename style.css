@@ -93,6 +93,11 @@ p {
   right: -30px;
 }
 
+.introducao-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .botao {
   background: #e21;
   color: #fff;
@@ -116,6 +121,7 @@ p {
   color: rgba(0, 0, 0, 0.2);
   text-align: right;
   padding: 40px;
+  /* word-break: break-all; */
 }
 
 .vantagens {
@@ -148,4 +154,45 @@ p {
   text-align: center;
   padding: 2.5rem;
   box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header {
+    gap: 30px;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+  .introducao::after {
+    display: none;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
